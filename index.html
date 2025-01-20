@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pt-5 text-white">
+    <div class="calc-interface container col-lg-6 col-12 mx-auto p-lg-4 p-2">
+        <h1 class="text-center my-3 fst-italic">A Simple Mathematical Calculator </h1>
+        <p class="text-center fs-4 fw-light fst-italic">Your Ultimate Solution to Arithmetic Operations  <img src="Assets/Laughing Heart.png" alt="" width="50px"></p>
+
+        <input type="number" class="input-box form-control shadow-none my-3 p-3 fw-bold fst-italic" placeholder="First Number" id="firstNumber" autofocus>
+        <input type="number" class="input-box form-control shadow-none my-3 p-3 text-black fw-bold fst-italic" placeholder="Second Number" id="secondNumber">
+
+        <div class="d-md-flex flex-md-row justify-content-between gap-5 mx-lg-5">
+            <button onclick="multiply()" class="btn btn-success my-2 shadow-none px-3">Multiply</button>
+            <button onclick="sum()" class="btn btn-primary my-2 shadow-none px-4">Add</button>
+            <button onclick="subtract()" class="btn btn-warning my-2 shadow-none px-3">Subtract</button>
+            <button onclick="quotient()" class="btn btn-danger my-2 shadow-none px-3">Divide</button>
+        </div>
+        <div class="fst-italic fw-light text-center fs-4 pt-3" id="show">Your answer will show here </div>
+
+    </div>
+    
+    <script>
+        
+        function multiply(){
+            var numberOne = Number(firstNumber.value)
+            var numberTwo = Number(secondNumber.value)
+            // console.log(numberOne, numberTwo);
+            var product = numberOne * numberTwo
+            show.innerHTML = "<h1 class= 'text-success text-center fst-italic'>" +product+ "</h1>"
+            // alert(product)
+        }
+
+        function sum(){
+            var numberOne = Number(firstNumber.value)
+            var numberTwo = Number(secondNumber.value)
+            // console.log(numberOne, numberTwo);
+            var sum = numberOne + numberTwo
+            show.innerHTML = "<h1 class= 'text-primary text-center fst-italic'>" +sum+ "</h1>"
+            // alert(sum)
+        }
+        
+        function subtract(){
+            var numberOne = Number(firstNumber.value)
+            var numberTwo = Number(secondNumber.value)
+            // console.log(numberOne, numberTwo);
+            var difference = numberOne - numberTwo
+            show.innerHTML = "<h1 class= 'text-warning text-center fst-italic'>" +difference+ "</h1>"
+            // alert(difference)
+        }
+        
+        function quotient(){
+            var numberOne = Number(firstNumber.value)
+            var numberTwo = Number(secondNumber.value)
+            // console.log(numberOne, numberTwo);
+            var quotient = numberOne / numberTwo
+            show.innerHTML = "<h1 class= 'text-danger text-center fst-italic'>" +quotient+ "</h1>"
+            // alert(quotient)
+        }
+    </script>
+</body>
+</html>
